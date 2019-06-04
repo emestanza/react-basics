@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Fragment} from 'react';
+import PrimerComponente from './components/PrimerComponente';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const empleado = {
+        nombre: 'Pedro Perez',
+        ocupacion: 'Herrero'
+    }
+
+    return ( 
+        ///Fragment se usa para cubrir los elementos que formen parte del return, 
+        //estos no pueden estar sueltos como tal, entonces en vez de cubrirlos con un <div>
+        //se usa Fragment para ese proposito
+        <Fragment>
+            <PrimerComponente />
+            <PrimerComponente />
+            <PrimerComponente />
+            <PrimerComponente />
+        </Fragment>
+    );
 }
 
 export default App;
