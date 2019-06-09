@@ -7,6 +7,5 @@ class PrimerComponente extends Component{
             <h1>Hola Mundo</h1>
         );
     }
-
 }
 export default PrimerComponente
